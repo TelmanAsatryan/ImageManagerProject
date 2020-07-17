@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.Client", "ImageManager.Client\ImageManager.Client.csproj", "{3AE4998C-25FB-4587-A46D-1D9BC21790DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.BLL", "ImageManager.BLL\ImageManager.BLL.csproj", "{FF511FFF-EFD3-45C0-88DA-F80FEA8A1F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.DAL", "ImageManager.DAL\ImageManager.DAL.csproj", "{C6CBAEA1-40C1-4F50-9444-17AFBF2D7995}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.DTO", "ImageManager.DTO\ImageManager.DTO.csproj", "{5F8836AC-95E1-4BC2-B027-0850BA72AB8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.Entities", "ImageManager.Entites\ImageManager.Entities.csproj", "{3648E8ED-647D-4E16-8DDF-2A354AC0A93F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.BLL.Interfaces", "ImageManager.BLL.Interfaces\ImageManager.BLL.Interfaces.csproj", "{F08361C0-10BF-497C-856E-210097889711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.BLL.Mapper", "ImageManager.BLL.Mapper\ImageManager.BLL.Mapper.csproj", "{FA6D3FF9-9DA0-4231-AA17-B0BA1EE26381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.API.Mapper", "ImageManager.API.Mapper\ImageManager.API.Mapper.csproj", "{56B35890-286B-49D0-A651-C0C82ED96B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.API", "ImageManager.API\ImageManager.API.csproj", "{31C765EB-AEC4-46A5-81CC-BB85DDA862D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.Models", "ImageManager.Models\ImageManager.Models.csproj", "{DAC39367-CAC2-4E71-9F05-2CD6336AE19A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageManager.Storage", "ImageManager.Storage\ImageManager.Storage.csproj", "{04D2C7D4-F5E9-42BE-A16E-CA670A63CFE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AE4998C-25FB-4587-A46D-1D9BC21790DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE4998C-25FB-4587-A46D-1D9BC21790DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE4998C-25FB-4587-A46D-1D9BC21790DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE4998C-25FB-4587-A46D-1D9BC21790DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF511FFF-EFD3-45C0-88DA-F80FEA8A1F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF511FFF-EFD3-45C0-88DA-F80FEA8A1F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF511FFF-EFD3-45C0-88DA-F80FEA8A1F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF511FFF-EFD3-45C0-88DA-F80FEA8A1F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6CBAEA1-40C1-4F50-9444-17AFBF2D7995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6CBAEA1-40C1-4F50-9444-17AFBF2D7995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6CBAEA1-40C1-4F50-9444-17AFBF2D7995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6CBAEA1-40C1-4F50-9444-17AFBF2D7995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8836AC-95E1-4BC2-B027-0850BA72AB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8836AC-95E1-4BC2-B027-0850BA72AB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8836AC-95E1-4BC2-B027-0850BA72AB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8836AC-95E1-4BC2-B027-0850BA72AB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3648E8ED-647D-4E16-8DDF-2A354AC0A93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3648E8ED-647D-4E16-8DDF-2A354AC0A93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3648E8ED-647D-4E16-8DDF-2A354AC0A93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3648E8ED-647D-4E16-8DDF-2A354AC0A93F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F08361C0-10BF-497C-856E-210097889711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08361C0-10BF-497C-856E-210097889711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08361C0-10BF-497C-856E-210097889711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08361C0-10BF-497C-856E-210097889711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6D3FF9-9DA0-4231-AA17-B0BA1EE26381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6D3FF9-9DA0-4231-AA17-B0BA1EE26381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6D3FF9-9DA0-4231-AA17-B0BA1EE26381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6D3FF9-9DA0-4231-AA17-B0BA1EE26381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B35890-286B-49D0-A651-C0C82ED96B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B35890-286B-49D0-A651-C0C82ED96B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B35890-286B-49D0-A651-C0C82ED96B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B35890-286B-49D0-A651-C0C82ED96B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C765EB-AEC4-46A5-81CC-BB85DDA862D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C765EB-AEC4-46A5-81CC-BB85DDA862D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C765EB-AEC4-46A5-81CC-BB85DDA862D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C765EB-AEC4-46A5-81CC-BB85DDA862D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC39367-CAC2-4E71-9F05-2CD6336AE19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC39367-CAC2-4E71-9F05-2CD6336AE19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC39367-CAC2-4E71-9F05-2CD6336AE19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC39367-CAC2-4E71-9F05-2CD6336AE19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D2C7D4-F5E9-42BE-A16E-CA670A63CFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D2C7D4-F5E9-42BE-A16E-CA670A63CFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D2C7D4-F5E9-42BE-A16E-CA670A63CFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D2C7D4-F5E9-42BE-A16E-CA670A63CFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC268A77-D364-40F3-B9FF-68408112F78F}
+	EndGlobalSection
+EndGlobal

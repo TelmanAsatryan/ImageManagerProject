@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ImageManager.BLL.Interfaces\ImageManager.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\ImageManager.DAL\ImageManager.DAL.csproj" />
+    <ProjectReference Include="..\ImageManager.Entites\ImageManager.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
