@@ -1,11 +1,18 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ImageManager.DAL.Configurations.ImageStoreConfigurations;
+using ImageManager.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.Extensions.Options;
 
 namespace ImageManager.DAL
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : DbContext
     {
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -19,7 +26,7 @@ namespace ImageManager.DAL
 
             base.OnModelCreating(builder);
 
-            //  builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new ImageStoreConfiguration());
 
 
 

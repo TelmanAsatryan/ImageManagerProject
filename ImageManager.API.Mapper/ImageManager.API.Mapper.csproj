@@ -9,4 +9,9 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ImageManager.DTO\ImageManager.DTO.csproj" />
+    <ProjectReference Include="..\ImageManager.Models\ImageManager.Models.csproj" />
+  </ItemGroup>
+
 </Project>

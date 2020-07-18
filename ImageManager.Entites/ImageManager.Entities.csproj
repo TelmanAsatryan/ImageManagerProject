@@ -8,8 +8,4 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="2.1.6" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ImageStore\" />
-  </ItemGroup>
-
 </Project>

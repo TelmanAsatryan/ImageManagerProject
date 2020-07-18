@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Catel.Configuration;
 using ImageManager.API.Mapper;
+using ImageManager.BLL.ImageStorageServices;
+using ImageManager.BLL.Interfaces.ImageStorageServices;
 using ImageManager.BLL.Mapper;
 using ImageManager.DAL;
 using ImageManager.DAL.Infrastructure;
@@ -40,6 +42,7 @@ namespace ImageManager.API
             services.AddSingleton<IConfigurationService, ConfigurationService>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IImageStorageService, ImageStorageService>();
 
         }
 
