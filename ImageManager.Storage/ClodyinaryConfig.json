@@ -1,0 +1,11 @@
+{
+  "ClodyConfigs": {
+    "CloudName": "damiiis6r",
+    "ApiKey": "591262355387469",
+    "APISecret": "VBgPuS6TcTySIel8VWMBJazGNag",
+    "APIEnvironmentVariable": "CLOUDINARY_URL=cloudinary://591262355387469:VBgPuS6TcTySIel8VWMBJazGNag@damiiis6r",
+    "BaseDeliveryURL": "http://res.cloudinary.com/damiiis6r",
+    "SecureDeliveryURL": "https://res.cloudinary.com/damiiis6r",
+    "APIBaseURL": "https://api.cloudinary.com/v1_1/damiiis6r"
+  }
+}

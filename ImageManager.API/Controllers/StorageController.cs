@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ImageManager.BLL.Interfaces.ImageStorageServices;
+﻿using ImageManager.BLL.Interfaces.ImageStorageServices;
 using ImageManager.DAL.Infrastructure;
 using ImageManager.DTO.ImageStorageDTOs;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using ImageManager.Models.ImageStorageModels;
-using Microsoft.AspNetCore.Http;
 using ImageManager.API.Helpers;
 using System.Drawing;
+using ImageManager.Storage;
+using System;
+using ImageManager.Entities.ImageStore;
+using System.Threading.Tasks;
 
 namespace ImageManager.API.Controllers
 {
@@ -18,6 +17,7 @@ namespace ImageManager.API.Controllers
     [ApiController]
     public class StorageController : ControllerBase
     {
+
         private readonly IImageStorageService imageStorageService;
         private readonly IMapper mapper;
         public StorageController(IUnitOfWork unitOfWork,
@@ -33,6 +33,7 @@ namespace ImageManager.API.Controllers
         [Route("GetImageById/{id}")]
         public JsonResult GetImageById(int id)
         {
+
             ImageStorageDTO imageStorageDTO = mapper.Map<ImageStorageDTO>(imageStorageService.GetImageById(id));
             ImageStorageViewModel imageStorageViewModel = mapper.Map<ImageStorageViewModel>(imageStorageDTO);
             return Json(imageStorageViewModel);
@@ -40,11 +41,24 @@ namespace ImageManager.API.Controllers
 
         [HttpPost]
         [Route("UploadImage")]
-        public JsonResult UploadImage(ImageStorageUploadViewModel model)
+        public async Task<JsonResult> UploadImage(ImageStorageUploadViewModel model)
         {
-            ImageConverter imageConverter = new ImageConverter();
-            Image img = imageConverter.byteArrayToImage(model.Image);
-            return Json("The Image Uploaded");
+            CloudinaryStorage cloudinaryStorage = new CloudinaryStorage();
+            string url = cloudinaryStorage.Cloudinary(model.Image, model.Name);
+            Guid guid = Guid.NewGuid();
+            ImageStorageDTO imageStorageDTO = new ImageStorageDTO()
+            {
+                Name = model.Name,
+                URL = url,
+                ConcurrencyStamp = guid.ToString()
+            };
+
+            ImageStorage imageStorage = mapper.Map<ImageStorage>(imageStorageDTO);
+            imageStorageService.Insert(imageStorage);
+
+            await SaveAsync();
+
+            return Json($"The Image Uploaded and is located at the following link \n {url}");
         }
 
     }

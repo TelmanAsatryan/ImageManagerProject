@@ -25,6 +25,7 @@
     <ProjectReference Include="..\ImageManager.BLL.Mapper\ImageManager.BLL.Mapper.csproj" />
     <ProjectReference Include="..\ImageManager.BLL\ImageManager.BLL.csproj" />
     <ProjectReference Include="..\ImageManager.DAL\ImageManager.DAL.csproj" />
+    <ProjectReference Include="..\ImageManager.Storage\ImageManager.Storage.csproj" />
   </ItemGroup>
 
 </Project>

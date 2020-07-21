@@ -11,16 +11,33 @@ namespace ImageManager.Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter Image Name");
-            string name = Console.ReadLine();
-            Console.WriteLine("Please Enter Image Local Path");
-            string ImagePath = Console.ReadLine();
-            Image img = Image.FromFile(ImagePath);
-            byte[] bArr = imgToByteArray(img);
-            ImageStorageUploadViewModel imageStorageUploadViewModel = new ImageStorageUploadViewModel();
-            imageStorageUploadViewModel.Name = name;
-            imageStorageUploadViewModel.Image = bArr;
-            Upload(imageStorageUploadViewModel);
+            Console.WriteLine("Please Write What You Want To Do (DOWNLOAD,UPLOAD,EXIT)");
+            string process = Console.ReadLine();
+            while (process != "EXIT")
+            {
+                switch (process)
+                {
+
+                    case "DOWNLOAD":
+
+                        Console.WriteLine("Please Enter Image Name");
+                        string name = Console.ReadLine();
+                        Console.WriteLine("Please Enter Image Local Path");
+                        string ImagePath = Console.ReadLine();
+                        Image img = Image.FromFile(ImagePath);
+                        byte[] bArr = imgToByteArray(img);
+                        ImageStorageUploadViewModel imageStorageUploadViewModel = new ImageStorageUploadViewModel();
+                        imageStorageUploadViewModel.Name = name;
+                        imageStorageUploadViewModel.Image = bArr;
+                        Upload(imageStorageUploadViewModel);
+                        break;
+                    case "UPLOAD":
+
+                        break;
+                }
+            }
+            Console.WriteLine("Thanks For Using Our Program (click ENTER to exit)");
+            Console.ReadKey();
         }
 
 
